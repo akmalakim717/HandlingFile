@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+
+    <title>BIODATA</title>
+  </head>
+  <body class="bg-light">
+    
+    	<h3 align="center"><strong>FORMULIR BIODATA</strong></h3><br>
+    	<form class="needs-validation container" id="formtugas" name="formtugas"  action="filetujuan.php" method="POST">
+             <div class="form-group">
+           <label for="NamaLengkap">Nama Lengkap</label>
+           <input type="text" name="NamaLengkap" class="form-control" placeholder="Nama Lengkap" id="NamaLengkap">
+         </div>
+         
+         <div class="row" >
+         
+          <div class="col-md-6"> 
+            <div class="form-group">
+             <label for="TempatLahir">Tempat lahir</label>
+             <input type="text" name="TempatLahir" class="form-control" placeholder="Tempat Lahir" id="TempatLahir">
+            </div>
+          </div>
+        
+          <div class="col-md-6"> 
+            <div class="form-group">
+             <label for="TanggalLahir">Tanggal lahir</label>
+             <input type="Date" name="TanggalLahir" class="form-control" id="TanggalLahir">
+            </div>
+          </div>
+          
+         </div>
+         
+               
+         
+         <div class="row" >
+         
+           <div class="col-md-6"> 
+           <div class="form-group">
+            <label for="AnakKe">Anak ke-</label>
+             <select class="form-control col-3" Name="AnakKe" id="AnakKe"> 
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+             </select>
+           </div>
+           </div>
+           
+           <div class="col-md-6"> 
+           <div class="form-group">
+            <label for="Dari">Dari</label>
+             <select class="form-control col-3" name="Dari" Id="Dari"> 
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+             </select>
+           </div>
+           </div>
+           
+         </div>
+
+         <div class="form-group">
+          <label for="AlamatDomisili">Alamat Domisili</label>
+            <input type="text" name="AlamatDomisili" class="form-control" id="AlamatDomisili" placeholder="Alamat Domisili">
+        </div>
+        
+           <div class="form-row">
+         
+          <div class="form-group col-md-6">
+            <label for="Kota">Kota</label>
+              <input type="text" name="Kota" class="form-control" id="Kota">
+          </div>
+          
+          <div class="form-group col-md-4">
+            <label for="Provinsi">Provinsi</label>
+              <select id="Provinsi" class="form-control" name="Provinsi">
+              <option selected>Choose...</option>
+                <option>Sulawesi Tenggara</option>
+                <option>Sulawesi Selatan</option>
+                <option>Sulawesi Tengah</option>
+              </select>
+          </div>
+          
+          <div class="form-group col-md-2">
+             <label for="Zip">Zip</label>
+                <input type="text" name="Zip" class="form-control" id="Zip">
+          </div>
+          
+         </div>
+        
+        <div class="form-group">
+          <label for="AlamatSekarang">Alamat Sekarang</label>
+            <input type="text" name="AlamatSekarang" class="form-control" id="AlamatSekarang" placeholder="Alamat Sekarang">
+         </div>
+         
+         <div class="form-row">
+         
+          <div class="form-group col-md-6">
+            <label for="KotaSekarang">Kota Sekarang</label>
+              <input type="text" name="KotaSekarang" class="form-control" id="KotaSekarang">
+          </div>
+          
+          <div class="form-group col-md-4">
+            <label for="ProvinsiSekarang">Provinsi</label>
+              <select id="ProvinsiSekarang" class="form-control" name="ProvinsiSekarang">
+              <option selected>Choose...</option>
+                <option>Sulawesi Tenggara</option>
+                <option>Sulawesi Selatan</option>
+                <option>Sulawesi Tengah</option>
+              </select>
+          </div>
+          
+          <div class="form-group col-md-2">
+             <label for="ZipSekarang">Zip</label>
+                <input type="text" name="ZipSekarang" class="form-control" id="ZipSekarang">
+          </div>
+          
+         </div> 
+                   
+           
+         <div class="form-group"> 
+          <label for ="Email">Email</label>
+          <input type="email" name="Email" class="form-control" placeholder="Email Anda" id="Email">
+         </div>
+         
+          <div class="form-group"> 
+          <label for="Password">Password</label>
+          <input type="Password" name="Password" class="form-control" placeholder="Password" id="Password">
+         </div>
+
+          <hr class="mb-4">
+            <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="gambar">Upload your identity</label>
+                      <input type="file" accept="image/*" name="gambarku" disabled class="form-control" id="gambarku" placeholder="">
+                      <small class="text-muted">Please use valid identity</small>
+                      <div class="invalid-feedback">
+                        You must upload this file
+                      </div>
+                    </div>
+              <div class="col-md-6 mb-3">
+                      <label for="gambar">Upload your photo</label>
+                      <input type="file" accept="image/*" name="fotoku" class="form-control" id="fotoku" placeholder="">
+
+                      <small class="text-muted">Please use valid identity</small>
+                      <div class="invalid-feedback">
+                        File format in png or jpg and size no more than 2MB
+                      </div>
+                    </div>
+
+
+
+		<br>
+		<div class="row">
+			<div class="col"><button type="submit" class="btn btn-primary btn-lg btn-block" id="insert" name="action" value="insert">INSERT DATA</button>
+			</div>
+			<div class="col"><button type="submit" class="btn btn-success btn-lg btn-block" id="update" name="action" value="update">UPDATE DATA</button>
+			</div>
+			<div class="col"><button type="submit" class="btn btn-info btn-lg btn-block" id="read" name="action" value="read">READ DATA</button>
+			</div>
+			<div class="col"><button type="submit" class="btn btn-danger btn-lg btn-block" id="delete" name="action" value="delete">DELETE DATA</button>
+			</div>
+		</div>
+		<br>
+
+	</form>
+
+	<div class="container" id="result"></div>
+    <footer class="navbar navbar-expand-lg bg-light navbar-light">
+    	<span class="nav-item">Copyright &copy; AMALUDDIN AKMAL_2BTKJ </span>
+    </footer>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">  
+     <script src="async.js"></script>
+    <script>
+    $("#formtugas").submit(kirimdata);
+    $(".tresult").dataTable();
+    </script> 
+  </body>
+</html>
